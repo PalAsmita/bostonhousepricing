@@ -3,3 +3,10 @@ scikit-learn
 pandas
 numpy
 matplotlib
+seaborn
+pickle
+requests
+app
+jsonify
+url_for
+render_template
