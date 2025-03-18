@@ -1,1 +1,61 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Price Prediction</title>
+</head>
+<body>
+    <div>
+        <h1>Boston House Price Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="CRIM">CRIM:</label>
+            <input type="text" name="CRIM" id="CRIM" placeholder="CRIM" required="required"><br>
+
+            <label for="ZN">ZN:</label>
+            <input type="text" name="ZN" id="ZN" placeholder="ZN" required="required"><br>
+
+            <label for="INDUS">INDUS:</label>
+            <input type="text" name="INDUS" id="INDUS" placeholder="INDUS" required="required"><br>
+
+            <label for="CHAS">CHAS:</label>
+            <input type="text" name="CHAS" id="CHAS" placeholder="CHAS" required="required"><br>
+
+            <label for="NOX">NOX:</label>
+            <input type="text" name="NOX" id="NOX" placeholder="NOX" required="required"><br>
+
+            <label for="RM">RM:</label>
+            <input type="text" name="RM" id="RM" placeholder="RM" required="required"><br>
+
+            <label for="age">Age:</label>
+            <input type="text" name="age" id="age" placeholder="Age" required="required"><br>
+
+            <label for="DIS">DIS:</label>
+            <input type="text" name="DIS" id="DIS" placeholder="DIS" required="required"><br>
+
+            <label for="RAD">RAD:</label>
+            <input type="text" name="RAD" id="RAD" placeholder="RAD" required="required"><br>
+
+            <label for="TAX">TAX:</label>
+            <input type="text" name="TAX" id="TAX" placeholder="TAX" required="required"><br>
+
+            <label for="PTRATIO">PTRATIO:</label>
+            <input type="text" name="PTRATIO" id="PTRATIO" placeholder="PTRATIO" required="required"><br>
+
+            <label for="B">B:</label>
+            <input type="text" name="B" id="B" placeholder="B" required="required"><br>
+
+            <label for="LSTAT">LSTAT:</label>
+            <input type="text" name="LSTAT" id="LSTAT" placeholder="LSTAT" required="required"><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Display the prediction result -->
+        <div>
+            <h3>Prediction Result:</h3>
+            <p>{{ prediction_text }}</p>
+        </div>
+    </div>
+</body>
+</html>
